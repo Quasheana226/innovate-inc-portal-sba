@@ -10,14 +10,14 @@
 const mongoose = require('mongoose');
 
 
-const { schema } = mongoose;
+const { Schema } = mongoose;
 
 const userSchema = new Schema(
     {
         email: {
             type: String,
             required: [true, "Email is required"],
-            unique: true
+            unique: true,
             lowercase: true,
             trim: true
         },
